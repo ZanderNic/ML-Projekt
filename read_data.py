@@ -38,4 +38,4 @@ def read_data(head):
   data['arr'] = data['arr'].map(lambda call: butter_bandpass_filter(call, 1500, 12000, 44100, 5))
   data['arr'] = data['arr'].map(lambda call: (call - np.mean(call)) / np.std(call))
   data['arr'] = data['arr'].map(lambda call: fourier(call))
-  return data
+  return data 
